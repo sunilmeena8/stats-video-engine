@@ -1,0 +1,353 @@
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(340px, 440px) minmax(0, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.controls {
+  display: grid;
+  gap: 12px;
+}
+
+.section {
+  border: 1px solid var(--sp-color-border);
+  border-radius: var(--sp-radius-lg);
+  background: linear-gradient(180deg, rgba(17, 26, 47, 0.75), rgba(11, 18, 34, 0.75));
+}
+.section > summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 16px;
+  cursor: pointer;
+  list-style: none;
+  font-weight: 600;
+  font-size: 13.5px;
+  user-select: none;
+}
+.section > summary::-webkit-details-marker {
+  display: none;
+}
+.section > summary svg:first-child {
+  color: var(--sp-color-accent-strong);
+}
+.section > summary::after {
+  content: '';
+  margin-left: auto;
+  width: 7px;
+  height: 7px;
+  border-right: 1.5px solid var(--sp-color-text-muted);
+  border-bottom: 1.5px solid var(--sp-color-text-muted);
+  transform: rotate(-45deg);
+  transition: transform 140ms ease;
+}
+.section[open] > summary::after {
+  transform: rotate(45deg);
+}
+.sectionBody {
+  display: grid;
+  gap: 14px;
+  padding: 2px 16px 16px;
+}
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.preview {
+  position: sticky;
+  top: 80px;
+  display: grid;
+  gap: 12px;
+}
+.previewHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.playerWrap {
+  display: grid;
+  gap: 10px;
+}
+.stage,
+.stagePortrait {
+  border-radius: 14px;
+  overflow: hidden;
+  background: #000;
+  border: 1px solid var(--sp-color-border-strong);
+  box-shadow:
+    0 30px 60px -30px rgba(0, 0, 0, 0.8),
+    0 0 0 1px rgba(98, 162, 255, 0.06);
+}
+.stagePortrait {
+  width: min(100%, 380px, calc((100vh - 290px) * 9 / 16));
+  margin: 0 auto;
+}
+.playerError {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  padding: 20px;
+  color: #ff9ba0;
+  text-align: center;
+  font-size: 14px;
+}
+.scrubber {
+  display: grid;
+  grid-template-columns: auto auto minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+}
+.timecode {
+  font-variant-numeric: tabular-nums;
+  font-size: 12.5px;
+  color: var(--sp-color-text-secondary);
+  white-space: nowrap;
+}
+.readout {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: var(--sp-color-text-muted);
+  font-variant-numeric: tabular-nums;
+}
+.readout strong {
+  color: var(--sp-color-text-primary);
+  font-weight: 600;
+}
+
+.annotation {
+  display: grid;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--sp-color-border);
+  background: var(--sp-color-surface-sunken);
+}
+.annotationGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 90px;
+  gap: 10px;
+  align-items: start;
+}
+.annotationGrid4 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  align-items: start;
+}
+
+.dirty {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  color: var(--sp-color-status-warning);
+}
+.dirty::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+@media (max-width: 1180px) {
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+  .preview {
+    position: static;
+    order: -1;
+  }
+}
+
+/* ─── Scene timeline under the player ─────────────────────────────────────────────────── */
+
+.timeline {
+  position: relative;
+  display: flex;
+  height: 26px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--sp-color-surface-sunken);
+  border: 1px solid var(--sp-color-border);
+  cursor: pointer;
+}
+.scene {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  min-width: 0;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--sp-color-text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-right: 1px solid var(--sp-color-canvas);
+  background: color-mix(in srgb, var(--scene) 22%, transparent);
+}
+.scene:last-child {
+  border-right: 0;
+}
+.marker {
+  position: absolute;
+  bottom: 0;
+  height: 7px;
+  border-radius: 2px 2px 0 0;
+  background: var(--sp-color-accent-strong);
+  opacity: 0.85;
+  pointer-events: none;
+}
+.markerWarn {
+  background: var(--sp-color-status-warning);
+}
+.playhead {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  margin-left: -1px;
+  background: #fff;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+}
+.sceneButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+.estimate {
+  margin-left: auto;
+  font-size: 12.5px;
+  color: var(--sp-color-text-secondary);
+  font-variant-numeric: tabular-nums;
+}
+.estimate strong {
+  color: var(--sp-color-text-primary);
+}
+
+/* ─── Music ───────────────────────────────────────────────────────────────────────────── */
+
+.trackList {
+  display: grid;
+  gap: 6px;
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 2px;
+}
+.track {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid var(--sp-color-border);
+  background: var(--sp-color-surface-sunken);
+  text-align: left;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+.track:hover {
+  border-color: var(--sp-color-border-strong);
+}
+.trackSelected {
+  border-color: var(--sp-color-accent);
+  background: color-mix(in srgb, var(--sp-color-accent) 12%, var(--sp-color-surface-sunken));
+}
+.trackName {
+  font-weight: 600;
+  font-size: 13px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.trackMeta {
+  font-size: 11.5px;
+  color: var(--sp-color-text-muted);
+  font-variant-numeric: tabular-nums;
+}
+.note {
+  font-size: 12px;
+  color: var(--sp-color-text-secondary);
+  line-height: 1.45;
+}
+.noteWarn {
+  color: var(--sp-color-status-warning);
+}
+.noteCritical {
+  color: var(--sp-color-status-critical);
+}
+
+/* ─── Quality checks ──────────────────────────────────────────────────────────────────── */
+
+.checks {
+  display: grid;
+  gap: 2px;
+}
+.check {
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr);
+  gap: 10px;
+  padding: 8px 2px;
+  border-top: 1px solid var(--sp-color-border);
+}
+.check:first-child {
+  border-top: 0;
+}
+.check strong {
+  font-size: 13px;
+  font-weight: 600;
+}
+.check p {
+  margin: 2px 0 0;
+  font-size: 12px;
+  color: var(--sp-color-text-secondary);
+  line-height: 1.45;
+}
+.formatStatus {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+
+/* ─── Annotations ─────────────────────────────────────────────────────────────────────── */
+
+.annotationHead {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--sp-color-text-muted);
+}
+.annotationHead > :last-child {
+  margin-left: auto;
+}
+.sourceRow {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr) auto;
+  gap: 8px;
+  align-items: center;
+}
+.suggestion {
+  display: grid;
+  gap: 4px;
+  padding: 8px 2px;
+  border-top: 1px solid var(--sp-color-border);
+}
+.suggestion:first-child {
+  border-top: 0;
+}

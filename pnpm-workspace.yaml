@@ -1,0 +1,42 @@
+packages:
+  - apps/*
+  - services/*
+  - packages/*
+
+# Supply-chain guard: only resolve package versions that have been public for at least 7 days.
+minimumReleaseAge: 10080
+
+# pnpm 10 blocks dependency lifecycle scripts by default; allow only the ones we need.
+onlyBuiltDependencies:
+  - esbuild
+  - sharp
+  - unrs-resolver
+  - msgpackr-extract
+
+overrides:
+  # schema-utils 4.8.0–4.8.2 declare a webpack >=5.112 peer, but Remotion pins webpack 5.105.
+  # 4.8.3 restores the ^5.0.0 peer; switch to it once it clears minimumReleaseAge.
+  schema-utils: 4.7.0
+
+# Shared versions (`"pkg": "catalog:"` in package.json). Bump them here, once.
+catalog:
+  # Remotion requires every remotion/@remotion package at one exact version, and zod at the
+  # exact version that Remotion release was built against (checked by the Remotion CLI).
+  remotion: 4.0.539
+  '@remotion/bundler': 4.0.539
+  '@remotion/cli': 4.0.539
+  '@remotion/fonts': 4.0.539
+  '@remotion/eslint-plugin': 4.0.539
+  '@remotion/renderer': 4.0.539
+  '@remotion/player': 4.0.539
+  zod: 4.5.4
+  next: 16.4.3
+  eslint-config-next: 16.4.3
+  '@next/eslint-plugin-next': 16.4.3
+  react: ^19.2.0
+  react-dom: ^19.2.0
+  '@types/react': ^19.2.0
+  '@types/react-dom': ^19.2.0
+  '@types/node': ^24.0.0
+  typescript: ~6.0.3
+  vitest: ^4.1.0

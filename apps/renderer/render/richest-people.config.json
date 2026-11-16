@@ -1,0 +1,41 @@
+{
+  "title": "The World’s Richest People",
+  "subtitle": "Net worth, 2000–2025",
+  "metricLabel": "Net worth",
+  "unitLabel": "USD billions",
+  "metricDescription": null,
+  "outputFormat": "long",
+  "resolution": "1080p",
+  "fps": 30,
+  "theme": "midnight",
+  "topN": 10,
+  "startPeriod": null,
+  "endPeriod": null,
+  "timing": {
+    "secondsPerPeriod": 1.4,
+    "transitionSeconds": 1.1,
+    "easing": "easeInOut",
+    "introSeconds": 3,
+    "outroSeconds": 3,
+    "finalHoldSeconds": 3,
+    "creditsSeconds": 4
+  },
+  "valueFormat": {
+    "style": "currency",
+    "currency": "USD",
+    "scale": "none",
+    "scaleLabel": "short",
+    "decimals": null,
+    "percentInput": "fraction",
+    "prefix": "",
+    "suffix": "B",
+    "locale": "en-US"
+  },
+  "showLogos": true,
+  "markEstimates": true,
+  "sourceText": "Source: synthetic_demo",
+  "outroText": null,
+  "showSourceUrls": false,
+  "annotations": [],
+  "music": null
+}

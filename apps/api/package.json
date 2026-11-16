@@ -1,0 +1,45 @@
+{
+  "name": "@statsopedia/api",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Statsopedia HTTP API (Express). Owns metadata in PostgreSQL and enqueues render jobs.",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch --clear-screen=false src/index.ts | pino-pretty",
+    "build": "tsc -p tsconfig.build.json",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\"",
+    "db:migrate": "tsx src/scripts/migrate.ts",
+    "db:seed": "tsx src/scripts/seed.ts",
+    "media:analyze": "tsx src/scripts/analyze-media.ts"
+  },
+  "dependencies": {
+    "@remotion/renderer": "catalog:",
+    "@statsopedia/chart-components": "workspace:*",
+    "@statsopedia/render-store": "workspace:*",
+    "@statsopedia/shared-schemas": "workspace:*",
+    "@statsopedia/shared-types": "workspace:*",
+    "@statsopedia/utils": "workspace:*",
+    "@statsopedia/video-config": "workspace:*",
+    "bullmq": "^6.5.0",
+    "express": "^5.1.0",
+    "ioredis": "^5.6.0",
+    "pg": "^8.16.0",
+    "pino-http": "^11.0.0",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@statsopedia/render-worker": "workspace:*",
+    "@types/express": "^5.0.3",
+    "@types/node": "catalog:",
+    "@types/pg": "^8.15.0",
+    "@types/supertest": "^6.0.3",
+    "pino-pretty": "^13.0.0",
+    "supertest": "^7.1.0",
+    "tsx": "^4.20.0",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "name": "@statsopedia/render-worker",
+  "version": "0.1.0",
+  "private": true,
+  "description": "BullMQ worker that renders Remotion videos from PostgreSQL render jobs into local storage.",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch --clear-screen=false src/index.ts | pino-pretty",
+    "build": "tsc -p tsconfig.build.json",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\""
+  },
+  "dependencies": {
+    "@remotion/bundler": "catalog:",
+    "@remotion/renderer": "catalog:",
+    "@statsopedia/render-store": "workspace:*",
+    "@statsopedia/shared-schemas": "workspace:*",
+    "@statsopedia/shared-types": "workspace:*",
+    "@statsopedia/utils": "workspace:*",
+    "@statsopedia/video-config": "workspace:*",
+    "bullmq": "^6.5.0",
+    "ioredis": "^5.6.0",
+    "pg": "^8.16.0",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@types/pg": "^8.15.0",
+    "pino-pretty": "^13.0.0",
+    "tsx": "^4.20.0",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/lib.d.ts",
+      "default": "./dist/lib.js"
+    }
+  }
+}

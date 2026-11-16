@@ -1,0 +1,47 @@
+{
+  "name": "@statsopedia/chart-components",
+  "version": "0.1.0",
+  "private": true,
+  "description": "React chart components for Statsopedia videos. Pure logic (ranking, race model, layout) has no Remotion dependency; the BarChartRace components use Remotion hooks.",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./pure": {
+      "types": "./dist/pure.d.ts",
+      "default": "./dist/pure.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "dev": "tsc -p tsconfig.build.json --watch --preserveWatchOutput",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\""
+  },
+  "dependencies": {
+    "@statsopedia/utils": "workspace:*",
+    "@statsopedia/shared-types": "workspace:*",
+    "@statsopedia/video-config": "workspace:*"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "remotion": "catalog:"
+  },
+  "devDependencies": {
+    "@statsopedia/shared-schemas": "workspace:*",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "remotion": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}

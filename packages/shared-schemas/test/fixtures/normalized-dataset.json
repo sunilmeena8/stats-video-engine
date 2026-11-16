@@ -1,0 +1,978 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-01-01T00:00:00.000Z",
+  "generator": {
+    "name": "statsopedia-data-processor",
+    "version": "0.1.0"
+  },
+  "dataset": {
+    "id": "0b7d6c2e-58f4-4c4b-9a8e-5d1f2a3b4c5d",
+    "slug": "synthetic-ranking",
+    "title": "Synthetic ranking (sample)",
+    "description": "Synthetic sample data, not real statistics.",
+    "versionId": "7e2c1a9b-3d4f-4e5a-8b6c-1d2e3f4a5b6c",
+    "version": 1,
+    "originalFilename": "synthetic-ranking.csv",
+    "checksumSha256": "0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "metric": {
+    "frequency": "yearly",
+    "rankingOrder": "desc",
+    "allowNegative": false,
+    "unit": "units"
+  },
+  "processing": {
+    "topN": 4,
+    "missingValues": "exclude",
+    "interpolation": {
+      "method": "linear",
+      "stepsPerPeriod": 2,
+      "maxGapPeriods": 1,
+      "allowLargeGaps": false
+    }
+  },
+  "timeRange": {
+    "frequency": "yearly",
+    "start": "2015",
+    "end": "2020",
+    "periods": ["2015", "2016", "2017", "2018", "2019", "2020"]
+  },
+  "entities": [
+    {
+      "id": "AUR",
+      "name": "Aurora",
+      "category": "North",
+      "imageUrl": null,
+      "firstPeriod": "2015",
+      "lastPeriod": "2020",
+      "observationCount": 6,
+      "missingPeriods": []
+    },
+    {
+      "id": "BRK",
+      "name": "Brookfield, Upper",
+      "category": "South",
+      "imageUrl": null,
+      "firstPeriod": "2015",
+      "lastPeriod": "2020",
+      "observationCount": 6,
+      "missingPeriods": []
+    },
+    {
+      "id": "CDR",
+      "name": "Cedar Côte",
+      "category": "South",
+      "imageUrl": null,
+      "firstPeriod": "2015",
+      "lastPeriod": "2020",
+      "observationCount": 4,
+      "missingPeriods": ["2016", "2018"]
+    },
+    {
+      "id": "DLT",
+      "name": "Delta 🌊",
+      "category": "East",
+      "imageUrl": null,
+      "firstPeriod": "2015",
+      "lastPeriod": "2018",
+      "observationCount": 4,
+      "missingPeriods": []
+    },
+    {
+      "id": "ELM",
+      "name": "Elmstead",
+      "category": "West",
+      "imageUrl": null,
+      "firstPeriod": "2017",
+      "lastPeriod": "2020",
+      "observationCount": 4,
+      "missingPeriods": []
+    }
+  ],
+  "sources": [
+    {
+      "id": "statsopedia-synthetic",
+      "url": "https://example.org/synthetic",
+      "observationCount": 25
+    }
+  ],
+  "observations": [
+    {
+      "entityId": "AUR",
+      "period": "2015",
+      "value": 120.5,
+      "sourceId": "statsopedia-synthetic",
+      "row": 2,
+      "notes": "Synthetic sample data, not real statistics"
+    },
+    {
+      "entityId": "BRK",
+      "period": "2015",
+      "value": 98.0,
+      "sourceId": "statsopedia-synthetic",
+      "row": 3,
+      "notes": null
+    },
+    {
+      "entityId": "CDR",
+      "period": "2015",
+      "value": 98.0,
+      "sourceId": "statsopedia-synthetic",
+      "row": 4,
+      "notes": "Tie with Brookfield in 2015"
+    },
+    {
+      "entityId": "DLT",
+      "period": "2015",
+      "value": 45.25,
+      "sourceId": "statsopedia-synthetic",
+      "row": 5,
+      "notes": null
+    },
+    {
+      "entityId": "AUR",
+      "period": "2016",
+      "value": 130.0,
+      "sourceId": "statsopedia-synthetic",
+      "row": 6,
+      "notes": null
+    },
+    {
+      "entityId": "BRK",
+      "period": "2016",
+      "value": 110.0,
+      "sourceId": "statsopedia-synthetic",
+      "row": 7,
+      "notes": null
+    },
+    {
+      "entityId": "CDR",
+      "period": "2016",
+      "value": null,
+      "sourceId": "statsopedia-synthetic",
+      "row": 8,
+      "notes": "Value not published for 2016"
+    },
+    {
+      "entityId": "DLT",
+      "period": "2016",
+      "value": 60.0,
+      "sourceId": "statsopedia-synthetic",
+      "row": 9,
+      "notes": null
+    },
+    {
+      "entityId": "AUR",
+      "period": "2017",
+      "value": 128.0,
+      "sourceId": "statsopedia-synthetic",
+      "row": 10,
+      "notes": null
+    },
+    {
+      "entityId": "BRK",
+      "period": "2017",
+      "value": 140.0,
+      "sourceId": "statsopedia-synthetic",
+      "row": 11,
+      "notes": null
+    },
+    {
+      "entityId": "CDR",
+      "period": "2017",
+      "value": 105.0,
+      "sourceId": "statsopedia-synthetic",
+      "row": 12,
+      "notes": null
+    },
+    {
+      "entityId": "DLT",
+      "period": "2017",
+      "value": 82.0,
+      "sourceId": "statsopedia-synthetic",
+      "row": 13,
+      "notes": null
+    },
+    {
+      "entityId": "ELM",
+      "period": "2017",
+      "value": 150.0,
+      "sourceId": "statsopedia-synthetic",
+      "row": 14,
+      "notes": "Enters in 2017"
+    },
+    {
+      "entityId": "AUR",
+      "period": "2018",
+      "value": 135.0,
+      "sourceId": "statsopedia-synthetic",
+      "row": 15,
+      "notes": null
+    },
+    {
+      "entityId": "BRK",
+      "period": "2018",
+      "value": 155.0,
+      "sourceId": "statsopedia-synthetic",
+      "row": 16,
+      "notes": null
+    },
+    {
+      "entityId": "DLT",
+      "period": "2018",
+      "value": 90.0,
+      "sourceId": "statsopedia-synthetic",
+      "row": 17,
+      "notes": null
+    },
+    {
+      "entityId": "ELM",
+      "period": "2018",
+      "value": 170.0,
+      "sourceId": "statsopedia-synthetic",
+      "row": 18,
+      "notes": null
+    },
+    {
+      "entityId": "AUR",
+      "period": "2019",
+      "value": 140.0,
+      "sourceId": "statsopedia-synthetic",
+      "row": 19,
+      "notes": null
+    },
+    {
+      "entityId": "BRK",
+      "period": "2019",
+      "value": 160.0,
+      "sourceId": "statsopedia-synthetic",
+      "row": 20,
+      "notes": null
+    },
+    {
+      "entityId": "CDR",
+      "period": "2019",
+      "value": 131.0,
+      "sourceId": "statsopedia-synthetic",
+      "row": 21,
+      "notes": "Returns after a gap"
+    },
+    {
+      "entityId": "ELM",
+      "period": "2019",
+      "value": 175.0,
+      "sourceId": "statsopedia-synthetic",
+      "row": 22,
+      "notes": null
+    },
+    {
+      "entityId": "AUR",
+      "period": "2020",
+      "value": 150.0,
+      "sourceId": "statsopedia-synthetic",
+      "row": 23,
+      "notes": null
+    },
+    {
+      "entityId": "BRK",
+      "period": "2020",
+      "value": 158.0,
+      "sourceId": "statsopedia-synthetic",
+      "row": 24,
+      "notes": null
+    },
+    {
+      "entityId": "CDR",
+      "period": "2020",
+      "value": 140.0,
+      "sourceId": "statsopedia-synthetic",
+      "row": 25,
+      "notes": null
+    },
+    {
+      "entityId": "ELM",
+      "period": "2020",
+      "value": 190.0,
+      "sourceId": "statsopedia-synthetic",
+      "row": 26,
+      "notes": null
+    }
+  ],
+  "rankings": [
+    {
+      "period": "2015",
+      "entries": [
+        {
+          "entityId": "AUR",
+          "value": 120.5,
+          "rank": 1,
+          "position": 1,
+          "valueKind": "observed"
+        },
+        {
+          "entityId": "BRK",
+          "value": 98.0,
+          "rank": 2,
+          "position": 2,
+          "valueKind": "observed"
+        },
+        {
+          "entityId": "CDR",
+          "value": 98.0,
+          "rank": 2,
+          "position": 3,
+          "valueKind": "observed"
+        },
+        {
+          "entityId": "DLT",
+          "value": 45.25,
+          "rank": 4,
+          "position": 4,
+          "valueKind": "observed"
+        }
+      ],
+      "entered": ["AUR", "BRK", "CDR", "DLT"],
+      "exited": []
+    },
+    {
+      "period": "2016",
+      "entries": [
+        {
+          "entityId": "AUR",
+          "value": 130.0,
+          "rank": 1,
+          "position": 1,
+          "valueKind": "observed"
+        },
+        {
+          "entityId": "BRK",
+          "value": 110.0,
+          "rank": 2,
+          "position": 2,
+          "valueKind": "observed"
+        },
+        {
+          "entityId": "DLT",
+          "value": 60.0,
+          "rank": 3,
+          "position": 3,
+          "valueKind": "observed"
+        }
+      ],
+      "entered": [],
+      "exited": ["CDR"]
+    },
+    {
+      "period": "2017",
+      "entries": [
+        {
+          "entityId": "ELM",
+          "value": 150.0,
+          "rank": 1,
+          "position": 1,
+          "valueKind": "observed"
+        },
+        {
+          "entityId": "BRK",
+          "value": 140.0,
+          "rank": 2,
+          "position": 2,
+          "valueKind": "observed"
+        },
+        {
+          "entityId": "AUR",
+          "value": 128.0,
+          "rank": 3,
+          "position": 3,
+          "valueKind": "observed"
+        },
+        {
+          "entityId": "CDR",
+          "value": 105.0,
+          "rank": 4,
+          "position": 4,
+          "valueKind": "observed"
+        }
+      ],
+      "entered": ["ELM", "CDR"],
+      "exited": ["DLT"]
+    },
+    {
+      "period": "2018",
+      "entries": [
+        {
+          "entityId": "ELM",
+          "value": 170.0,
+          "rank": 1,
+          "position": 1,
+          "valueKind": "observed"
+        },
+        {
+          "entityId": "BRK",
+          "value": 155.0,
+          "rank": 2,
+          "position": 2,
+          "valueKind": "observed"
+        },
+        {
+          "entityId": "AUR",
+          "value": 135.0,
+          "rank": 3,
+          "position": 3,
+          "valueKind": "observed"
+        },
+        {
+          "entityId": "DLT",
+          "value": 90.0,
+          "rank": 4,
+          "position": 4,
+          "valueKind": "observed"
+        }
+      ],
+      "entered": ["DLT"],
+      "exited": ["CDR"]
+    },
+    {
+      "period": "2019",
+      "entries": [
+        {
+          "entityId": "ELM",
+          "value": 175.0,
+          "rank": 1,
+          "position": 1,
+          "valueKind": "observed"
+        },
+        {
+          "entityId": "BRK",
+          "value": 160.0,
+          "rank": 2,
+          "position": 2,
+          "valueKind": "observed"
+        },
+        {
+          "entityId": "AUR",
+          "value": 140.0,
+          "rank": 3,
+          "position": 3,
+          "valueKind": "observed"
+        },
+        {
+          "entityId": "CDR",
+          "value": 131.0,
+          "rank": 4,
+          "position": 4,
+          "valueKind": "observed"
+        }
+      ],
+      "entered": ["CDR"],
+      "exited": ["DLT"]
+    },
+    {
+      "period": "2020",
+      "entries": [
+        {
+          "entityId": "ELM",
+          "value": 190.0,
+          "rank": 1,
+          "position": 1,
+          "valueKind": "observed"
+        },
+        {
+          "entityId": "BRK",
+          "value": 158.0,
+          "rank": 2,
+          "position": 2,
+          "valueKind": "observed"
+        },
+        {
+          "entityId": "AUR",
+          "value": 150.0,
+          "rank": 3,
+          "position": 3,
+          "valueKind": "observed"
+        },
+        {
+          "entityId": "CDR",
+          "value": 140.0,
+          "rank": 4,
+          "position": 4,
+          "valueKind": "observed"
+        }
+      ],
+      "entered": [],
+      "exited": []
+    }
+  ],
+  "interpolation": {
+    "method": "linear",
+    "stepsPerPeriod": 2,
+    "maxGapPeriods": 1,
+    "allowLargeGaps": false,
+    "frameCount": 11,
+    "estimatedValueCount": 22,
+    "bridgedGaps": [
+      {
+        "entityId": "CDR",
+        "from": "2015",
+        "to": "2017",
+        "missingPeriods": 1
+      },
+      {
+        "entityId": "CDR",
+        "from": "2017",
+        "to": "2019",
+        "missingPeriods": 1
+      }
+    ],
+    "skippedGaps": []
+  },
+  "frames": [
+    {
+      "index": 0,
+      "fromPeriod": "2015",
+      "toPeriod": "2016",
+      "progress": 0.0,
+      "isEstimate": false,
+      "entries": [
+        {
+          "entityId": "AUR",
+          "value": 120.5,
+          "rank": 1,
+          "position": 1,
+          "valueKind": "observed"
+        },
+        {
+          "entityId": "BRK",
+          "value": 98.0,
+          "rank": 2,
+          "position": 2,
+          "valueKind": "observed"
+        },
+        {
+          "entityId": "CDR",
+          "value": 98.0,
+          "rank": 2,
+          "position": 3,
+          "valueKind": "observed"
+        },
+        {
+          "entityId": "DLT",
+          "value": 45.25,
+          "rank": 4,
+          "position": 4,
+          "valueKind": "observed"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "fromPeriod": "2015",
+      "toPeriod": "2016",
+      "progress": 0.5,
+      "isEstimate": true,
+      "entries": [
+        {
+          "entityId": "AUR",
+          "value": 125.25,
+          "rank": 1,
+          "position": 1,
+          "valueKind": "interpolated"
+        },
+        {
+          "entityId": "BRK",
+          "value": 104.0,
+          "rank": 2,
+          "position": 2,
+          "valueKind": "interpolated"
+        },
+        {
+          "entityId": "CDR",
+          "value": 99.75,
+          "rank": 3,
+          "position": 3,
+          "valueKind": "interpolated"
+        },
+        {
+          "entityId": "DLT",
+          "value": 52.625,
+          "rank": 4,
+          "position": 4,
+          "valueKind": "interpolated"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "fromPeriod": "2016",
+      "toPeriod": "2017",
+      "progress": 0.0,
+      "isEstimate": true,
+      "entries": [
+        {
+          "entityId": "AUR",
+          "value": 130.0,
+          "rank": 1,
+          "position": 1,
+          "valueKind": "observed"
+        },
+        {
+          "entityId": "BRK",
+          "value": 110.0,
+          "rank": 2,
+          "position": 2,
+          "valueKind": "observed"
+        },
+        {
+          "entityId": "CDR",
+          "value": 101.5,
+          "rank": 3,
+          "position": 3,
+          "valueKind": "interpolated"
+        },
+        {
+          "entityId": "DLT",
+          "value": 60.0,
+          "rank": 4,
+          "position": 4,
+          "valueKind": "observed"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "fromPeriod": "2016",
+      "toPeriod": "2017",
+      "progress": 0.5,
+      "isEstimate": true,
+      "entries": [
+        {
+          "entityId": "AUR",
+          "value": 129.0,
+          "rank": 1,
+          "position": 1,
+          "valueKind": "interpolated"
+        },
+        {
+          "entityId": "BRK",
+          "value": 125.0,
+          "rank": 2,
+          "position": 2,
+          "valueKind": "interpolated"
+        },
+        {
+          "entityId": "CDR",
+          "value": 103.25,
+          "rank": 3,
+          "position": 3,
+          "valueKind": "interpolated"
+        },
+        {
+          "entityId": "DLT",
+          "value": 71.0,
+          "rank": 4,
+          "position": 4,
+          "valueKind": "interpolated"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "fromPeriod": "2017",
+      "toPeriod": "2018",
+      "progress": 0.0,
+      "isEstimate": false,
+      "entries": [
+        {
+          "entityId": "ELM",
+          "value": 150.0,
+          "rank": 1,
+          "position": 1,
+          "valueKind": "observed"
+        },
+        {
+          "entityId": "BRK",
+          "value": 140.0,
+          "rank": 2,
+          "position": 2,
+          "valueKind": "observed"
+        },
+        {
+          "entityId": "AUR",
+          "value": 128.0,
+          "rank": 3,
+          "position": 3,
+          "valueKind": "observed"
+        },
+        {
+          "entityId": "CDR",
+          "value": 105.0,
+          "rank": 4,
+          "position": 4,
+          "valueKind": "observed"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "fromPeriod": "2017",
+      "toPeriod": "2018",
+      "progress": 0.5,
+      "isEstimate": true,
+      "entries": [
+        {
+          "entityId": "ELM",
+          "value": 160.0,
+          "rank": 1,
+          "position": 1,
+          "valueKind": "interpolated"
+        },
+        {
+          "entityId": "BRK",
+          "value": 147.5,
+          "rank": 2,
+          "position": 2,
+          "valueKind": "interpolated"
+        },
+        {
+          "entityId": "AUR",
+          "value": 131.5,
+          "rank": 3,
+          "position": 3,
+          "valueKind": "interpolated"
+        },
+        {
+          "entityId": "CDR",
+          "value": 111.5,
+          "rank": 4,
+          "position": 4,
+          "valueKind": "interpolated"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "fromPeriod": "2018",
+      "toPeriod": "2019",
+      "progress": 0.0,
+      "isEstimate": true,
+      "entries": [
+        {
+          "entityId": "ELM",
+          "value": 170.0,
+          "rank": 1,
+          "position": 1,
+          "valueKind": "observed"
+        },
+        {
+          "entityId": "BRK",
+          "value": 155.0,
+          "rank": 2,
+          "position": 2,
+          "valueKind": "observed"
+        },
+        {
+          "entityId": "AUR",
+          "value": 135.0,
+          "rank": 3,
+          "position": 3,
+          "valueKind": "observed"
+        },
+        {
+          "entityId": "CDR",
+          "value": 118.0,
+          "rank": 4,
+          "position": 4,
+          "valueKind": "interpolated"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "fromPeriod": "2018",
+      "toPeriod": "2019",
+      "progress": 0.5,
+      "isEstimate": true,
+      "entries": [
+        {
+          "entityId": "ELM",
+          "value": 172.5,
+          "rank": 1,
+          "position": 1,
+          "valueKind": "interpolated"
+        },
+        {
+          "entityId": "BRK",
+          "value": 157.5,
+          "rank": 2,
+          "position": 2,
+          "valueKind": "interpolated"
+        },
+        {
+          "entityId": "AUR",
+          "value": 137.5,
+          "rank": 3,
+          "position": 3,
+          "valueKind": "interpolated"
+        },
+        {
+          "entityId": "CDR",
+          "value": 124.5,
+          "rank": 4,
+          "position": 4,
+          "valueKind": "interpolated"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "fromPeriod": "2019",
+      "toPeriod": "2020",
+      "progress": 0.0,
+      "isEstimate": false,
+      "entries": [
+        {
+          "entityId": "ELM",
+          "value": 175.0,
+          "rank": 1,
+          "position": 1,
+          "valueKind": "observed"
+        },
+        {
+          "entityId": "BRK",
+          "value": 160.0,
+          "rank": 2,
+          "position": 2,
+          "valueKind": "observed"
+        },
+        {
+          "entityId": "AUR",
+          "value": 140.0,
+          "rank": 3,
+          "position": 3,
+          "valueKind": "observed"
+        },
+        {
+          "entityId": "CDR",
+          "value": 131.0,
+          "rank": 4,
+          "position": 4,
+          "valueKind": "observed"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "fromPeriod": "2019",
+      "toPeriod": "2020",
+      "progress": 0.5,
+      "isEstimate": true,
+      "entries": [
+        {
+          "entityId": "ELM",
+          "value": 182.5,
+          "rank": 1,
+          "position": 1,
+          "valueKind": "interpolated"
+        },
+        {
+          "entityId": "BRK",
+          "value": 159.0,
+          "rank": 2,
+          "position": 2,
+          "valueKind": "interpolated"
+        },
+        {
+          "entityId": "AUR",
+          "value": 145.0,
+          "rank": 3,
+          "position": 3,
+          "valueKind": "interpolated"
+        },
+        {
+          "entityId": "CDR",
+          "value": 135.5,
+          "rank": 4,
+          "position": 4,
+          "valueKind": "interpolated"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "fromPeriod": "2020",
+      "toPeriod": null,
+      "progress": 0.0,
+      "isEstimate": false,
+      "entries": [
+        {
+          "entityId": "ELM",
+          "value": 190.0,
+          "rank": 1,
+          "position": 1,
+          "valueKind": "observed"
+        },
+        {
+          "entityId": "BRK",
+          "value": 158.0,
+          "rank": 2,
+          "position": 2,
+          "valueKind": "observed"
+        },
+        {
+          "entityId": "AUR",
+          "value": 150.0,
+          "rank": 3,
+          "position": 3,
+          "valueKind": "observed"
+        },
+        {
+          "entityId": "CDR",
+          "value": 140.0,
+          "rank": 4,
+          "position": 4,
+          "valueKind": "observed"
+        }
+      ]
+    }
+  ],
+  "quality": {
+    "status": "valid_with_warnings",
+    "summary": {
+      "rowCount": 25,
+      "validRowCount": 25,
+      "entityCount": 5,
+      "sourceCount": 1,
+      "periodCount": 6,
+      "observedPeriodCount": 6,
+      "missingValueCount": 1,
+      "errorCount": 0,
+      "warningCount": 2,
+      "issueCounts": {
+        "MISSING_PERIODS": 1,
+        "MISSING_VALUE": 1
+      },
+      "durationMs": 0
+    },
+    "warnings": [
+      {
+        "severity": "warning",
+        "code": "MISSING_PERIODS",
+        "message": "CDR has no value for 2 period(s) between its first and last observation: 2016, 2018",
+        "row": null,
+        "column": null,
+        "entityId": "CDR",
+        "value": "2016, 2018"
+      },
+      {
+        "severity": "warning",
+        "code": "MISSING_VALUE",
+        "message": "value is empty: kept as a missing observation (not zero)",
+        "row": 8,
+        "column": "value",
+        "entityId": "CDR",
+        "value": null
+      }
+    ],
+    "warningsTruncated": false
+  }
+}

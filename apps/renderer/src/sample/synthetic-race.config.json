@@ -1,0 +1,86 @@
+{
+  "title": "Synthetic Economies Index",
+  "subtitle": "Fictional economies, 1990–2024 · development sample, not real statistics",
+  "metricLabel": "Economic output",
+  "unitLabel": "USD (synthetic)",
+  "metricDescription": "Fictional economic output of invented countries, for testing the renderer.",
+  "outputFormat": "long",
+  "resolution": "1080p",
+  "fps": 30,
+  "theme": "midnight",
+  "topN": 10,
+  "startPeriod": null,
+  "endPeriod": null,
+  "timing": {
+    "secondsPerPeriod": 1.4,
+    "transitionSeconds": 1.1,
+    "easing": "easeInOut",
+    "introSeconds": 3,
+    "outroSeconds": 3,
+    "finalHoldSeconds": 3,
+    "creditsSeconds": 4
+  },
+  "valueFormat": {
+    "style": "currency",
+    "currency": "USD",
+    "scale": "auto",
+    "scaleLabel": "short",
+    "decimals": null,
+    "percentInput": "fraction",
+    "prefix": "",
+    "suffix": "",
+    "locale": "en-US"
+  },
+  "showLogos": true,
+  "markEstimates": true,
+  "sourceText": "Source: Statsopedia synthetic sample (fictional data)",
+  "outroText": null,
+  "showSourceUrls": true,
+  "annotations": [
+    {
+      "id": "lumen-founded",
+      "kind": "top_entry",
+      "title": "Lumen Republic enters the index",
+      "text": "A fictional newcomer joins in 2010 and climbs quickly.",
+      "icon": "▲",
+      "imageUrl": null,
+      "sources": [
+        {
+          "name": "Statsopedia synthetic sample",
+          "url": "https://example.org/statsopedia/synthetic"
+        }
+      ],
+      "timing": {
+        "kind": "period",
+        "period": "2010",
+        "durationSeconds": 4
+      },
+      "priority": "normal",
+      "style": "card",
+      "position": "auto"
+    },
+    {
+      "id": "harbor-dissolved",
+      "kind": "ranking_change",
+      "title": "Old Harbor Union leaves the index",
+      "text": "Its last reported year is 2012 (fictional).",
+      "icon": "▼",
+      "imageUrl": null,
+      "sources": [
+        {
+          "name": "Statsopedia synthetic sample",
+          "url": "https://example.org/statsopedia/synthetic"
+        }
+      ],
+      "timing": {
+        "kind": "period",
+        "period": "2013",
+        "durationSeconds": 3.5
+      },
+      "priority": "normal",
+      "style": "callout",
+      "position": "auto"
+    }
+  ],
+  "music": null
+}

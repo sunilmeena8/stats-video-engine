@@ -1,0 +1,26 @@
+entity_id,entity_name,year,value,unit,source_id,entity_category,entity_image,source_url,notes
+AUR,Aurora,2015,120.5,units,statsopedia-synthetic,North,,https://example.org/synthetic,"Synthetic sample data, not real statistics"
+BRK,"Brookfield, Upper",2015,98,units,statsopedia-synthetic,South,,,
+CDR,Cedar Côte,2015,98,units,statsopedia-synthetic,South,,,"Tie with Brookfield in 2015"
+DLT,Delta 🌊,2015,45.25,units,statsopedia-synthetic,East,,,
+AUR,Aurora,2016,130,units,statsopedia-synthetic,North,,,
+BRK,"Brookfield, Upper",2016,110,units,statsopedia-synthetic,South,,,
+CDR,Cedar Côte,2016,,units,statsopedia-synthetic,South,,,"Value not published for 2016"
+DLT,Delta 🌊,2016,60,units,statsopedia-synthetic,East,,,
+AUR,Aurora,2017,128,units,statsopedia-synthetic,North,,,
+BRK,"Brookfield, Upper",2017,140,units,statsopedia-synthetic,South,,,
+CDR,Cedar Côte,2017,105,units,statsopedia-synthetic,South,,,
+DLT,Delta 🌊,2017,82,units,statsopedia-synthetic,East,,,
+ELM,Elmstead,2017,150,units,statsopedia-synthetic,West,,,"Enters in 2017"
+AUR,Aurora,2018,135,units,statsopedia-synthetic,North,,,
+BRK,"Brookfield, Upper",2018,155,units,statsopedia-synthetic,South,,,
+DLT,Delta 🌊,2018,90,units,statsopedia-synthetic,East,,,
+ELM,Elmstead,2018,170,units,statsopedia-synthetic,West,,,
+AUR,Aurora,2019,140,units,statsopedia-synthetic,North,,,
+BRK,"Brookfield, Upper",2019,160,units,statsopedia-synthetic,South,,,
+CDR,Cedar Côte,2019,131,units,statsopedia-synthetic,South,,,"Returns after a gap"
+ELM,Elmstead,2019,175,units,statsopedia-synthetic,West,,,
+AUR,Aurora,2020,150,units,statsopedia-synthetic,North,,,
+BRK,"Brookfield, Upper",2020,158,units,statsopedia-synthetic,South,,,
+CDR,Cedar Côte,2020,140,units,statsopedia-synthetic,South,,,
+ELM,Elmstead,2020,190,units,statsopedia-synthetic,West,,,

@@ -1,0 +1,56 @@
+{
+  "status": "valid_with_warnings",
+  "columns": {
+    "found": [
+      "entity_id",
+      "entity_name",
+      "year",
+      "value",
+      "unit",
+      "source_id",
+      "entity_category",
+      "entity_image",
+      "source_url",
+      "notes"
+    ],
+    "missing": [],
+    "unexpected": []
+  },
+  "summary": {
+    "rowCount": 25,
+    "validRowCount": 25,
+    "entityCount": 5,
+    "sourceCount": 1,
+    "periodCount": 6,
+    "observedPeriodCount": 6,
+    "missingValueCount": 1,
+    "errorCount": 0,
+    "warningCount": 2,
+    "issueCounts": {
+      "MISSING_PERIODS": 1,
+      "MISSING_VALUE": 1
+    },
+    "durationMs": 0
+  },
+  "issues": [
+    {
+      "severity": "warning",
+      "code": "MISSING_PERIODS",
+      "message": "CDR has no value for 2 period(s) between its first and last observation: 2016, 2018",
+      "row": null,
+      "column": null,
+      "entityId": "CDR",
+      "value": "2016, 2018"
+    },
+    {
+      "severity": "warning",
+      "code": "MISSING_VALUE",
+      "message": "value is empty: kept as a missing observation (not zero)",
+      "row": 8,
+      "column": "value",
+      "entityId": "CDR",
+      "value": null
+    }
+  ],
+  "issuesTruncated": false
+}

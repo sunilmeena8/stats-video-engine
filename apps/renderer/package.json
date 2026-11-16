@@ -1,0 +1,41 @@
+{
+  "name": "@statsopedia/renderer",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Remotion compositions. Independent of the dashboard and API: all input arrives as props.",
+  "type": "module",
+  "scripts": {
+    "dev": "remotion studio src/index.ts --port 3100",
+    "compositions": "remotion compositions src/index.ts",
+    "render:sample": "remotion render src/index.ts SampleLong ../../storage/renders/previews/sample-long.mp4",
+    "render:sample:short": "remotion render src/index.ts SampleShort ../../storage/renders/previews/sample-short.mp4",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "sample:data": "tsx scripts/generate-sample-data.ts",
+    "sample:music": "tsx scripts/generate-synthetic-music.ts",
+    "render:race": "tsx scripts/render-race.ts --dataset src/sample/synthetic-race.json --config src/sample/synthetic-race.config.json --music render/synthetic-music.json --out ../../storage/renders/previews/synthetic-race.mp4",
+    "render:race:short": "tsx scripts/render-race.ts --dataset src/sample/synthetic-race.json --config src/sample/synthetic-race.config.json --music render/synthetic-music.json --format short --out ../../storage/renders/previews/synthetic-race-short.mp4",
+    "fonts:sync": "tsx scripts/sync-fonts.ts"
+  },
+  "dependencies": {
+    "@remotion/cli": "catalog:",
+    "@statsopedia/chart-components": "workspace:*",
+    "@statsopedia/shared-types": "workspace:*",
+    "@statsopedia/utils": "workspace:*",
+    "@statsopedia/video-config": "workspace:*",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "remotion": "catalog:",
+    "zod": "catalog:",
+    "@statsopedia/shared-schemas": "workspace:*",
+    "@remotion/fonts": "catalog:"
+  },
+  "devDependencies": {
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:",
+    "tsx": "^4.20.0",
+    "@fontsource/inter": "5.3.0"
+  }
+}

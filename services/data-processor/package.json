@@ -1,0 +1,15 @@
+{
+  "name": "@statsopedia/data-processor",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Python/FastAPI CSV processing service. These scripts wrap the local virtualenv so pnpm can orchestrate it.",
+  "scripts": {
+    "bootstrap": "python3 -m venv .venv && .venv/bin/python -m pip install --upgrade pip && .venv/bin/python -m pip install -r requirements-dev.txt",
+    "dev": ".venv/bin/python -m app --reload",
+    "start": ".venv/bin/python -m app",
+    "lint": ".venv/bin/python -m ruff check . && .venv/bin/python -m ruff format --check .",
+    "format": ".venv/bin/python -m ruff format .",
+    "typecheck": ".venv/bin/python -m mypy",
+    "test": ".venv/bin/python -m pytest"
+  }
+}
